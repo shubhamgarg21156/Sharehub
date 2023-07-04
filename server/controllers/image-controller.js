@@ -10,7 +10,7 @@ export const uploadImage  = async (request,response) => {
     try{
         const file = await File.create(fileObject);
         // console.log(file);
-        return response.status(200).json({path:`http://localhost:8000/file/${file._id}`});
+        return response.status(200).json({path:`https://sharehub.onrender.com/file/${file._id}`});
     }catch(error){
         console.log(error.message);
         return response.status(500).json({error : error.message});
